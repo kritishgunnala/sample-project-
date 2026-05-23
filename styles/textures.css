@@ -1,0 +1,126 @@
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  opacity: 0.16;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  pointer-events: none;
+  background-image: radial-gradient(circle at 30% 20%, rgba(0, 82, 204, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(17, 17, 17, 0.08), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(42, 42, 42, 0.06), transparent 60%);
+  z-index: 0;
+}
+
+.site-paper {
+  position: relative;
+  isolation: isolate;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.028) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.site-paper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 82, 204, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 82, 204, 0.045) 1px, transparent 1px);
+  background-size: 144px 144px;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+  z-index: 0;
+}
+
+.site-paper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.paper-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='%23000000' fill-opacity='0.38'%3E%3Ccircle cx='12' cy='14' r='1'/%3E%3Ccircle cx='43' cy='57' r='1'/%3E%3Ccircle cx='102' cy='31' r='1'/%3E%3Ccircle cx='132' cy='121' r='1'/%3E%3Ccircle cx='168' cy='87' r='1'/%3E%3Ccircle cx='73' cy='153' r='1'/%3E%3Ccircle cx='94' cy='99' r='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.paper-panel {
+  position: relative;
+  isolation: isolate;
+}
+
+.paper-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+.paper-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.paper-grid-surface {
+  position: relative;
+  isolation: isolate;
+}
+
+.paper-grid-surface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 82, 204, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 82, 204, 0.2) 1px, transparent 1px),
+    linear-gradient(rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px);
+  background-size: 56px 56px, 56px 56px, 112px 112px, 112px 112px;
+  opacity: 0.16;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+
+.paper-grid-surface > * {
+  position: relative;
+  z-index: 1;
+}
+
+.masking-tape {
+  position: relative;
+}
+
+.masking-tape::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 18px;
+  width: 90px;
+  height: 22px;
+  border-radius: 4px;
+  background: rgba(237, 228, 216, 0.8);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transform: rotate(-3deg);
+}

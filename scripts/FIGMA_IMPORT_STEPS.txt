@@ -1,0 +1,17 @@
+# Capture + Figma Import (Deadline Quick Path)
+
+1) Run in PowerShell:
+   powershell -ExecutionPolicy Bypass -File .\scripts\capture-pages.ps1
+
+2) After it finishes, open folder:
+   C:\Users\gunna\Documents\Codex\2026-05-22\i-had-a-conversation-with-my\exports
+
+3) Drag these files into matching Figma frames:
+   - home.png -> Home
+   - services.png -> Services
+   - process.png -> Process
+   - work.png -> Work
+   - clients.png -> Clients
+   - contact.png -> Contact
+
+4) Keep your prototype links as already wired.
